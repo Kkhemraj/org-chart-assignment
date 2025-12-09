@@ -1,0 +1,26 @@
+.multi-child {
+    &>div {
+        position: relative;
+        &::after {
+            content: "";
+            width: 100%;
+            height:  calc(0.25rem * .5);;
+            background-color: #AFBACA;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+         &:first-child {
+            &::after {
+                width: 50%;
+                left:50%;
+            }
+        }
+        &:last-child {
+            &::after {
+                width: 50%;
+                right:50%;
+            }
+        }
+    }
+}
